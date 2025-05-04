@@ -1,0 +1,77 @@
+/* Custom styles for ML Inference System Dashboard */
+
+/* General styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Card styles */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.card-header {
+    border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;
+}
+
+/* Architecture diagram styles */
+.architecture-diagram {
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.service rect {
+    transition: stroke 0.3s ease;
+}
+
+/* Custom badge styles */
+.badge {
+    font-weight: 500;
+}
+
+/* Utility classes */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Form controls */
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Make buttons more visually prominent */
+.btn {
+    font-weight: 500;
+}
+
+/* Service status cards */
+.service-card {
+    transition: transform 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Pre and code blocks */
+pre {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+pre code {
+    color: inherit;
+    word-break: normal;
+    white-space: pre;
+}

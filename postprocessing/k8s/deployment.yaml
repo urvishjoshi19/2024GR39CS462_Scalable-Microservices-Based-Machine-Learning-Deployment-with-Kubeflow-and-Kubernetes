@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postprocessing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postprocessing
+  template:
+    metadata:
+      labels:
+        app: postprocessing
+    spec:
+      containers:
+      - name: postprocessing
+        image: postprocessing:latest
+        ports:
+        - containerPort: 8000

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: preprocessing
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: preprocessing
+  template:
+    metadata:
+      labels:
+        app: preprocessing
+    spec:
+      containers:
+      - name: preprocessing
+        image: preprocessing:latest
+        ports:
+        - containerPort: 8000

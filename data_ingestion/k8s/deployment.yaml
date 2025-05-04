@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-ingestion
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-ingestion
+  template:
+    metadata:
+      labels:
+        app: data-ingestion
+    spec:
+      containers:
+      - name: data-ingestion
+        image: data-ingestion:latest
+        ports:
+        - containerPort: 8000
